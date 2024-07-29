@@ -12,7 +12,8 @@ public class VerificaNumerosPrimos {
             int num = Integer.parseInt(arg);
             numeros.add(num);
             resultados.add(null);
-            Thread thread = new Thread(new VerificadorPrimo(num,resultados));
+            int index = resultados.size() - 1;
+            Thread thread = new Thread(new VerificadorPrimo(num, resultados, index));
             threads.add(thread);
             thread.start();
         }
@@ -29,43 +30,6 @@ public class VerificaNumerosPrimos {
             int num = numeros.get(i);
             boolean ehPrimo = resultados.get(i);
             System.out.println(num + (ehPrimo ? " é primo" : " não é primo"));
-        }
-    }
-
-    static class VerificadorPrimo implements Runnable {
-        private final int numero;
-        private final List<Boolean> resultados;
-
-        public VerificadorPrimo(int numero, List<Boolean> resultados) {
-            this.numero = numero;
-            this.resultados = resultados;
-        }
-
-        @Override
-        public void run() {
-            boolean ehPrimo = verificarPrimo(numero);
-            resultados.set(resultados.size() - 1, ehPrimo);
-        }
-
-        private boolean verificarPrimo(int num) {
-                if (num <= 1) {
-                    return false;
-                }
-                if (num <= 3) {
-                    return true;
-                }
-                if (num % 2 == 0 || num % 3 == 0) {
-                    return false;
-                }
-    
-                for (int i = 5; i * i <= num; i += 6) {
-                    if (num % i == 0 || num % (i + 2) == 0) {
-                        return false;
-                    }
-                }
-    
-                return true;
-            
         }
     }
 }
