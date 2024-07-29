@@ -31,7 +31,7 @@ Este projeto em Java verifica se os números fornecidos como argumentos na linha
 2. Compile os arquivos java:
    javac VerificaNumerosPrimos.java VerificadorPrimo.java
    
-###Execução
+Execução
 
 1. Após a compilação, execute o programa passando os números que deseja verificar como argumentos:
    java VerificaNumerosPrimos 5 12 17 23 42
@@ -43,7 +43,7 @@ Este projeto em Java verifica se os números fornecidos como argumentos na linha
    23 é primo
    42 não é primo
 
-###Explicação do Código
+Explicação do Código
 Main Class (VerificaNumerosPrimos):
 
 Cria uma lista de threads, números e resultados.
