@@ -59,9 +59,9 @@ O método verificarPrimo implementa uma otimização simples para verificar se u
 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorias ou correções.
 
-Licença
-Este projeto está licenciado sob a MIT License.
+Licença<br>
+Este projeto está licenciado sob a MIT License.<br><br>
 
-Autor
-Demosthens Cavalcanti
+Autor<br>
+Demosthens Cavalcanti<br>
 https://www.linkedin.com/in/demosthens-cavalcanti-4a0b9627b/ | demosthenscf@gmail.com
